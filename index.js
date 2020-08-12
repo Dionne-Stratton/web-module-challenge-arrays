@@ -120,14 +120,14 @@ Hint: You can use .splice() for this
 
 */
 
-  function removeFlavorByName(arr, string){
-    for(let i = 0; i < arr.length; i++){
-      if(arr[i]===(string)){
-        arr.splice(i, 1);
-      }
+function removeFlavorByName(arr, string) {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === (string)) {
+      arr.splice(i, 1);
     }
-    return arr;
   }
+  return arr;
+}
 console.log(removeFlavorByName(originalFlavors, "Vanilla"))
 
 
@@ -141,7 +141,7 @@ Your function should accept:
 and should return a new array that is identical to the old array. You can name the new array however you'd like. */
 
 function copy(originalFlavors, copiedFlavors) {
-  copiedFlavors = [... originalFlavors];
+  copiedFlavors = [...originalFlavors];
   return copiedFlavors;
 }
 console.log(copy(originalFlavors))
@@ -166,16 +166,16 @@ DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem.
 
 hint - you can use the .includes method to help you solve this */
 
-  function filterByWord(arr, string){
-    let newArr = [];
-    for(let i = 0; i < arr.length; i++){
-      if(arr[i].includes(string)){
-        newArr.push(arr[i]);
-      }
+function filterByWord(arr, string) {
+  let newArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i].includes(string)) {
+      newArr.push(arr[i]);
     }
-    return newArr;
+  }
+  return newArr;
 }
-  console.log(filterByWord(originalFlavors, 'Chocolate'));
+console.log(filterByWord(originalFlavors, 'Chocolate'));
 
 
 
@@ -192,11 +192,15 @@ and should return the average number of words per item in the array.
 
 For example, getAverageWordLength(originalFlavors) should return a number between 0 and 3. */
 
-// function getAverageWordLength( /*code here*/ ) {
-//
-//   /*code here*/
-//
-// }
+function getAverageWordLength(arr) {
+  let wordCount = 0
+
+  for (let i = 0; i < arr.length; i++) {
+    return wordCount = arr[i].split(' ').length
+  }
+  return wordcount / arr.length
+}
+console.log(getAverageWordLength(originalFlavors))
 
 
 /* STRETCH 2: Baskin Robins now offers new flavors, seasonal flavors, and even regional flavors.
